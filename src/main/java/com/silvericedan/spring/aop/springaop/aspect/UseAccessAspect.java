@@ -23,7 +23,18 @@ public class UseAccessAspect {
     //* : intercept all methods call
     //(..) : regardless of his arguments
 
-    //joinpoint shows in the log what is the method we are intercepting
+
+    //terminology : the expression "execution(... " its called "point cut"
+    // and whats its inside the method is called "advice"
+    //the combination of "point cut" and "advice" its called an "Aspect"
+    //the join point its a specific interception of a method call
+    //join point is a specific execution instance
+    //if there are 100 method calls, then it will be 100 joinPoints
+
+    //the framework that makes sure that the aspect is call at the right time is call: Weaver
+    //and the process of doing it its called: Weaving
+
+    //joinPoint shows in the log what is the method we are intercepting
     @Before("execution(* com.silvericedan.spring.aop.springaop.business.*.*(..))")
     public void before(JoinPoint joinPoint){
 
@@ -31,5 +42,6 @@ public class UseAccessAspect {
         logger.info(" Check for user access");
         logger.info(" Allowed execution for - {}", joinPoint);
     }
+
 
 }
