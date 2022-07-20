@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 //how do we say this is a Configuration? with @Configuration
 @Aspect
 @Configuration
-public class UseAccessAspect {
+public class UserAccessAspect {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
