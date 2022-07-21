@@ -18,7 +18,7 @@ public class MethodExecutionCalculationAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     //Around advice, we look into intercepting a method allowing to proceed, doing some before and after.
-    @Around(value="execution(* com.silvericedan.spring.aop.springaop.business.*.*(..))")
+    @Around(value="com.silvericedan.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
     public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long startTime = System.currentTimeMillis();

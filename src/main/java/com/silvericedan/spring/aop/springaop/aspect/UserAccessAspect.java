@@ -35,7 +35,7 @@ public class UserAccessAspect {
     //and the process of doing it its called: Weaving
 
     //joinPoint shows in the log what is the method we are intercepting
-    @Before("execution(* com.silvericedan.spring.aop.springaop.business.*.*(..))")
+    @Before("com.silvericedan.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")
     public void before(JoinPoint joinPoint){
 
         //one use can be to check user access before method executes
